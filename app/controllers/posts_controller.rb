@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @old =  Time.now.minus_with_coercion(@post.created_at)./60.round
   end
 
   def new
