@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+<!-- <% @post.weeks.each do |week| %>
+  <h3><%= link_to week.title, post_week_path(@post, week)%></h3>
+<% end %> -->
+
+
+<!-- <p><%= link_to "Add a Week", new_post_week_path(@post) %></p> -->
+
+<p><%= link_to "Edit", edit_post_path(@post) %></p>
+<p><%= link_to "Delete", post_path(@post), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+
+
+
+<%= link_to "Return to Courses", posts_path %>
